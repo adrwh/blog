@@ -1,0 +1,11 @@
+
+<span class="w3-left-align">{{ .Page.Date }}</span>
+<time datetime="{{ .Date }}">{{ .Date }}</time>
+{{ with .Params.tags }}
+  <br>
+  <i data-feather="tag"></i>
+  {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <a class="w3-tag w3-small" href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+{{ end }}

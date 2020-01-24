@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <article class="message">
+            <div class="message-body">
+                    <h1 class="subtitle"><a href="{{ .Permalink }}" class="has-text-blue" style="display: block;text-decoration: none;">{{ .Title }}</a></h1>
+            <p class="has-text-black">{{ .Description }}</p>
+            {{ $dateFormat := .Site.Params.dateFormat }}
+
+            <time datetime="{{ .Date }}">
+                {{ .Date.Format $dateFormat }}
+            </time>
+
+            {{ with .Params.tags }}
+                {{ range . }}
+                {{ $href := print (absURL "tags/") (urlize .) }}
+                    <span class="tag is-success is-light" ><a href="{{ $href }}">{{ . }}</a></span>
+                {{ end }}
+            {{ end }}
+            </div>
+        </article>
+{{ end }}
+{{ end }}
+

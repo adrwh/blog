@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" }}
+<body>
+  <!-- Header for the index.html -->
+{{ if .IsHome }}
+{{ partial "header.html" }}
+{{ end }}
+
+<!-- The main section -->
+<section class="section">
+
+  <div class="container">
+    {{ block "main" . }}{{ end }}
+  </div>
+
+</section>
+
+<!-- Footer -->
+{{ partial "footer.html" }}
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+baseURL = "https://adrwh.github.io"
+languageCode = "en-us"
+title = "ADRW"
+pygmentsUseClasses=false
+
+[permalink]
+  blog = "/:filename/"
+
+[params]
+  mainSections = ["blog"]
+  dateFormat = "Jan 2, 2006"
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe= true
