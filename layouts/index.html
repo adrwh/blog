@@ -2,7 +2,7 @@
 {{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
     <article class="message">
             <div class="message-body">
-                    <h1 class="subtitle"><a href="{{ .Permalink }}" class="has-text-blue" style="display: block;text-decoration: none;">{{ .Title }}</a></h1>
+                    <h1 class="subtitle"><a href="{{ .Permalink }}" class="has-text-info" style="display: block;text-decoration: none;">{{ .Title }}</a></h1>
             <p class="has-text-black">{{ .Description }}</p>
             {{ $dateFormat := .Site.Params.dateFormat }}
 
