@@ -6,7 +6,7 @@
   <ul>
     <li>
       <p>
-      <span class="tag is-link">{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+      <span class="tag is-link">{{ .PublishDate.Format .Site.Params.dateFormat}}</span>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       <br> {{ .Description }}
       </p>
