@@ -1,11 +1,18 @@
 {{ define "main" }}
-<div class="w3-container">
-<h1>{{ .Title }}</h1>
+<div class="container">
+<h1 class="title">{{ .Title }}</h1>
 {{ range .Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }} - {{ .Description }}</a>
-  <br>
-</p>
+<div class="content">
+  <ul>
+    <li>
+      <p>
+      <span class="tag is-link">{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <br> {{ .Description }}
+      </p>
+    </li>
+  </ul>
+</div>
 {{ end }}
 </div>
 {{ end }}

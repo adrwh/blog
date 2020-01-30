@@ -1,7 +1,7 @@
 ---
 title: 'MS Teams Channel Conversation "Backup"'
 date: 2020-01-01T15:38:04+11:00
-description: "this is about how we made backed up Teams Conversations"
+description: "This is about how we backed up MS Teams Conversations"
 ghissueid: 1
 tags: ["msgraph","teams"]
 draft: false
