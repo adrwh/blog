@@ -15,4 +15,9 @@
         {{ end }}
     <p>{{ .Content }}</p>
 </div>
+<div id="comments">
+{{ with .Params.ghissueid }}
+        {{ partial "comments.html" $ }}
+    {{ end }}
+</div>
 {{ end }}

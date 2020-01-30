@@ -2,6 +2,7 @@
 title: "Creating Watchers in Elasticsearch to catch Domain Admin security group changes"
 date: 2020-01-23T21:27:54+11:00
 description: ""
+ghissueid: 2
 tags: ["elasticsearch","watcher","alerting","security"]
 draft: false
 ---
